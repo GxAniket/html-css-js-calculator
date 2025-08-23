@@ -1,0 +1,75 @@
+:root {
+  --bg: #0f1220;
+  --panel: #171a2b;
+  --key: #22263a;
+  --key-ac: #ff5a6e;
+  --key-op: #3d7bff;
+  --key-eq: #22c55e;
+  --text: #e5e7eb;
+  --muted: #9aa0b4;
+  --shadow: 0 10px 25px rgba(0,0,0,.35);
+  --radius: 22px;
+}
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  display: grid;
+  place-items: center;
+  background: radial-gradient(1200px 600px at 10% 10%, #131733 0%, #0b0e1a 50%, #070912 100%), var(--bg);
+  color: var(--text);
+  font: 500 16px/1.4 system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+}
+
+.calc {
+  width: min(92vw, 420px);
+  background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,0)), var(--panel);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.display {
+  background: rgba(255,255,255,.03);
+  border-radius: 18px;
+  padding: 18px 16px;
+  min-height: 96px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+  overflow: hidden;
+  word-break: break-all;
+  user-select: none;
+}
+.history { color: var(--muted); font-size: 0.95rem; min-height: 1.2em; letter-spacing: .5px; }
+.current { font-size: 2.2rem; font-weight: 700; text-align: right; }
+
+.keys { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+button {
+  appearance: none;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  border-radius: 14px;
+  padding: 16px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text);
+  background: var(--key);
+  box-shadow: inset 0 -2px 0 rgba(255,255,255,.03), var(--shadow);
+  transition: transform .05s ease, filter .15s ease, background .2s ease;
+}
+button:active { transform: translateY(2px) scale(.99); filter: brightness(1.05); }
+.op { background: #20305c; }
+.eq { background: linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,0)), var(--key-eq); color: #07140b; }
+.ac { background: linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,0)), var(--key-ac); color: #23070b; }
+.wide { grid-column: span 2; }
+
+@media (max-width: 420px) {
+  .current { font-size: 8.5vw; }
+  button { padding: 14px; font-size: 1rem; }
+}
