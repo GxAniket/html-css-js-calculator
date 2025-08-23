@@ -13,6 +13,14 @@ It supports **basic arithmetic operations** with a clean UI, **keyboard support*
 
 ---
 
+## 📸 Screenshot  
+
+<p align="center">
+  <img width="821" height="763" alt="image" src="https://github.com/user-attachments/assets/b811ca69-8d2d-4875-8d02-fdf4c2b8a4cc" />
+</p>
+
+---
+
 ## ✨ Features  
 
 - 🎨 **Modern UI** with dark theme  
