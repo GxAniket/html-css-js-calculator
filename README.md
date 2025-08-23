@@ -51,7 +51,9 @@ Calculator/
 ## 🚀 Live Demo  
 
 <p align="center">
-  <img src="https://media.giphy.com/media/QBd2kLB5qDmysEXre9/giphy.gif" width="300" alt="Calculator Demo" />
+  <a href="https://gxaniket.github.io/html-css-js-calculator/" target="_blank">
+    <img src="https://img.shields.io/badge/Click%20Here-Live%20Demo-brightgreen?style=for-the-badge&logo=github&logoColor=white" alt="Live Demo Badge" />
+  </a>
 </p>
 
 ---
